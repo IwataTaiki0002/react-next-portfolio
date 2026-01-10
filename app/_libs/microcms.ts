@@ -20,8 +20,8 @@ export type News = {
   title: string;
   description: string;
   content: string;
-  thumbnail?: MicroCMSImage;
   category: Category;
+  thumbnail?: MicroCMSImage;
 } & MicroCMSListContent;
 
 if (!process.env.MICROCMS_SERVICE_DOMAIN) {
