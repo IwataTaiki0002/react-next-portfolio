@@ -24,9 +24,9 @@ export default async function Home() {
             className={styles.taiyaki}
             priority
           />
-          <h1 className={styles.title}>Welcome to My Portfolio!</h1>
+          <h1 className={styles.title}>Welcome to my Portfolio!</h1>
           <p className={styles.description}>
-            私たちは市場をリードしているグローバルテックカンパニーです。
+            このサイトでは私の制作物やブログ記事を紹介しています。<br />
           </p>
         </div>
         <Image
@@ -38,7 +38,7 @@ export default async function Home() {
         />
       </section>
       <section className={styles.news}>
-        <h2 className={styles.newsTitle}>News</h2>
+        <h2 className={styles.newsTitle}>blog</h2>
         <NewsList news={data.contents} />
         <div className={styles.newsLink}>
           <ButtonLink href="/blog">もっとみる</ButtonLink>
