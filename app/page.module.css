@@ -50,7 +50,7 @@
   z-index: -1;
 }
 
-.news {
+.blog {
   position: relative;
   background-color: #fff;
   width: 840px;
@@ -63,7 +63,7 @@
   font-size: 1.5rem;
 }
 
-.newsLink {
+.blogLink {
   position: absolute;
   right: -40px;
   bottom: -40px;
@@ -97,12 +97,12 @@
     z-index: -1;
   }
 
-  .news {
+  .blog {
     width: calc(100% - 32px);
     padding: 16px 24px;
   }
 
-  .newsLink {
+  .blogLink {
     position: relative;
     right: auto;
     bottom: auto;
