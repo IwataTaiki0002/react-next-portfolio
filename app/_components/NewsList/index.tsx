@@ -4,10 +4,10 @@ import Link from 'next/link';
 import styles from './index.module.css';
 import Category from '../Category';
 import Date from '../Date';
-import { News } from '@/app/_libs/microcms';
+import { Blog } from '@/app/_libs/microcms';
 
 type Props = {
-  news: News[];
+  news: Blog[];
 };
 
 export default function NewsList({ news }: Props) {
@@ -18,7 +18,7 @@ export default function NewsList({ news }: Props) {
     <ul>
       {news.map((article) => (
         <li key={article.id} className={styles.list}>
-          <Link href={`/news/${article.id}`} className={styles.link}>
+          <Link href={`/blog/${article.id}`} className={styles.link}>
             {article.thumbnail ? (
               <Image
                 src={article.thumbnail.url}
