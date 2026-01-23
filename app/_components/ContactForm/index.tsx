@@ -17,7 +17,7 @@ export default function ContactForm() {
       <p className={styles.success}>
         お問い合わせいただき、ありがとうございます。
         <br />
-        お返事まで今しばらくお待ちください。
+        内容を確認次第、ご連絡させていただきます。
       </p>
     );
   }
@@ -49,7 +49,7 @@ export default function ContactForm() {
       </div>
       <div className={styles.item}>
         <label className={styles.label} htmlFor="company">
-          会社名
+          会社名・組織名（任意）
         </label>
         <input
           className={styles.textfield}

@@ -1,10 +1,10 @@
-import styles from './page.module.css';
-import Image from 'next/image';
+import styles from "./page.module.css";
+import Image from "next/image";
 
-import { getBlogList } from '@/app/_libs/microcms';
-import { TOP_BLOG_LIMIT } from '@/app/_constants';
-import NewsList from '@/app/_components/NewsList';
-import ButtonLink from '@/app/_components/ButtonLink';
+import { getBlogList } from "@/app/_libs/microcms";
+import { TOP_BLOG_LIMIT } from "@/app/_constants";
+import NewsList from "@/app/_components/NewsList";
+import ButtonLink from "@/app/_components/ButtonLink";
 
 export const revalidate = 60;
 
@@ -26,7 +26,9 @@ export default async function Home() {
           />
           <h1 className={styles.title}>Welcome to my Portfolio!</h1>
           <p className={styles.description}>
-            このサイトでは私の制作物やブログ記事を紹介しています。<br />
+            エンジニアを目指して学習中です。
+            <br />
+            制作物や学びの記録を発信しています。
           </p>
         </div>
         <Image
@@ -38,10 +40,10 @@ export default async function Home() {
         />
       </section>
       <section className={styles.blog}>
-        <h2 className={styles.newsTitle}>blog</h2>
+        <h2 className={styles.newsTitle}>最新の記事</h2>
         <NewsList news={data.contents} />
         <div className={styles.blogLink}>
-          <ButtonLink href="/blog">もっとみる</ButtonLink>
+          <ButtonLink href="/blog">記事一覧を見る</ButtonLink>
         </div>
       </section>
     </>
