@@ -24,6 +24,14 @@ export type Blog = {
   thumbnail?: MicroCMSImage;
 } & MicroCMSListContent;
 
+export type Work = {
+  date: string;
+  name: string;
+  link_url?: string;
+  thumbnail?: MicroCMSImage;
+  content: string;
+} & MicroCMSListContent;
+
 if (!process.env.MICROCMS_SERVICE_DOMAIN) {
   throw new Error('MICROCMS_SERVICE_DOMAIN is required');
 }
@@ -59,6 +67,32 @@ export const getBlogDetail = async (
 ) => {
   const detailData = await client.getListDetail<Blog>({
     endpoint: 'blog',
+    contentId,
+    queries,
+    customRequestInit: {
+      next: {
+        revalidate: queries?.draftKey === undefined ? 60 : 0,
+      },
+    },
+  });
+
+  return detailData;
+};
+
+export const getWorksList = async (queries?: MicroCMSQueries) => {
+  const listData = await client.getList<Work>({
+    endpoint: 'works',
+    queries,
+  });
+  return listData;
+};
+
+export const getWorksDetail = async (
+  contentId: string,
+  queries?: MicroCMSQueries
+) => {
+  const detailData = await client.getListDetail<Work>({
+    endpoint: 'works',
     contentId,
     queries,
     customRequestInit: {

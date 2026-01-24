@@ -19,6 +19,9 @@ export default function Menu() {
             <Link href="/blog">ブログ</Link>
           </li>
           <li>
+            <Link href="/works">作品</Link>
+          </li>
+          <li>
             <Link href="/profile">プロフィール</Link>
           </li>
           <li>

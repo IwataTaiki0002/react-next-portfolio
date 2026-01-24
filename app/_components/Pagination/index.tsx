@@ -6,15 +6,17 @@ type Props = {
   totalCount: number;
   current?: number;
   basePath?: string;
+  limit?: number;
 };
 
 export default function Pagination({
   totalCount,
   current = 1,
   basePath = '/blog',
+  limit = BLOG_LIST_LIMIT,
 }: Props) {
   const pages = Array.from(
-    { length: Math.ceil(totalCount / BLOG_LIST_LIMIT) },
+    { length: Math.ceil(totalCount / limit) },
     (_, i) => i + 1
   );
 
