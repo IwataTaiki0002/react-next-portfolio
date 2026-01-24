@@ -14,15 +14,18 @@
   margin-bottom: 1.5rem;
   background: #fff;
 }
+
 .top {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: transparent;
   color: #fff;
   overflow: hidden;
   padding: 200px 0;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 24px rgba(30,60,114,0.08);
 }
 
 .title {
@@ -50,29 +53,81 @@
   z-index: -1;
 }
 
-.blog {
-  position: relative;
-  background-color: #fff;
+.sections {
   width: 840px;
-  margin: -40px auto 0;
-  padding: 24px 40px;
+  margin: 0 auto 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.section {
+  background-color: #fff;
+  padding: 40px;
   border-radius: var(--border-radius);
+  position: relative;
 }
 
-.newsTitle {
-  font-size: 1.5rem;
+.sectionTitle {
+  font-size: 1.8rem;
+  margin-bottom: 24px;
 }
 
-.blogLink {
-  position: absolute;
-  right: -40px;
-  bottom: -40px;
+.sectionDescription {
+  margin-bottom: 24px;
+  line-height: 1.8;
+}
+
+.profilePreview {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin: 24px 0;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 12px;
+}
+
+.profileImage {
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.profileContent {
+  flex: 1;
+}
+
+.profileName {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #1e3c72;
+  margin-bottom: 6px;
+}
+
+.profilePosition {
+  font-size: 0.95rem;
+  color: #6ba3d4;
+  margin-bottom: 12px;
+}
+
+.profileText {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+.sectionLink {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media (max-width: 640px) {
   .top {
     padding: 120px 16px;
   }
+
   .title {
     font-size: 2rem;
     text-align: left;
@@ -97,15 +152,22 @@
     z-index: -1;
   }
 
-  .blog {
+  .sections {
     width: calc(100% - 32px);
-    padding: 16px 24px;
+    margin: 0 auto 40px;
+    gap: 24px;
   }
 
-  .blogLink {
-    position: relative;
-    right: auto;
-    bottom: auto;
-    margin-top: 16px;
+  .section {
+    padding: 24px;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+  }
+
+  .sectionLink {
+    justify-content: center;
   }
 }

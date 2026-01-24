@@ -7,6 +7,7 @@ import { BLOG_LIST_LIMIT } from '@/app/_constants';
 export default async function Page() {
   const { contents: news, totalCount } = await getBlogList({
     limit: BLOG_LIST_LIMIT,
+    fields: ['id', 'title', 'description', 'content', 'category', 'thumbnail', 'publishedAt', 'createdAt'],
   });
 
   return (

@@ -3,34 +3,76 @@
   margin-bottom: 40px;
 }
 
-.list {
+.wrapper {
   display: flex;
-  align-items: flex-start;
-  gap: 40px;
-  margin-bottom: 80px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
 }
 
-.list:nth-child(even) {
-  flex-direction: row-reverse;
+.listWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  padding: 40px 24px 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.22);
+  transform: translateY(-2px) scale(1.02);
+}
+
+.imageArea {
+  margin-bottom: 24px;
 }
 
 .image {
-  width: 240px;
-  height: auto;
-  border-radius: var(--border-radius);
+  border-radius: 50%;
+  object-fit: cover;
+  width: 180px;
+  height: 180px;
+  border: 4px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
+}
+
+.infoArea {
+  text-align: center;
 }
 
 .name {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: bold;
+  margin-bottom: 8px;
+  color: #fff;
 }
 
 .position {
-  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #b3d0f7;
+  margin-bottom: 16px;
 }
 
 .profile {
-  font-size: 0.9rem;
+  font-size: 1rem;
+  color: #eaf6ff;
+  line-height: 1.7;
+  margin-bottom: 0;
 }
 
 .footer {
@@ -50,6 +92,67 @@
 
 .empty {
   margin-bottom: 40px;
+  text-align: center;
+  color: #fff;
+}
+
+.profileSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding: 40px 0;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  color: #222;
+  text-align: center;
+  margin-bottom: 32px;
+  font-weight: bold;
+}
+
+.profileCard {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(30, 60, 114, 0.15);
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 480px;
+  width: 100%;
+}
+
+.profileImageWrapper {
+  margin-bottom: 24px;
+}
+
+.profileImage {
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(30, 60, 114, 0.18);
+}
+
+.profileName {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #1e3c72;
+}
+
+.profilePosition {
+  font-size: 1.1rem;
+  color: #6ba3d4;
+  margin-bottom: 16px;
+}
+
+.profileText {
+  font-size: 1.1rem;
+  line-height: 2;
+  color: #222;
+  text-align: center;
 }
 
 @media (max-width: 640px) {
@@ -74,5 +177,90 @@
 
   .position {
     text-align: center;
+  }
+
+  .card {
+    padding: 28px 8px 24px 8px;
+  }
+
+  .image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .listWrapper {
+    max-width: 98vw;
+  }
+
+  .profileCard {
+    padding: 24px 8px;
+  }
+
+  .profileName {
+    font-size: 1.4rem;
+  }
+}
+
+/* 学習中のスキルセクション */
+.skillsSection {
+  margin-top: 32px;
+  margin-bottom: 40px;
+}
+
+.skillsTitle {
+  font-size: 1.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 24px;
+  font-weight: bold;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.skillItem {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.skillItem:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.skillIcon {
+  border-radius: 8px;
+}
+
+.skillName {
+  font-size: 0.9rem;
+  color: #555;
+  font-weight: 500;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .skillsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .skillItem {
+    padding: 16px;
+  }
+  
+  .skillsTitle {
+    font-size: 1.3rem;
   }
 }

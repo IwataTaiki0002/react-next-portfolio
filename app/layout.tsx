@@ -1,6 +1,5 @@
 import "./globals.css";
-import Header from "./_components/Header";
-import Footer from "./_components/Footer";
+import ClientRoot from "./ClientRoot";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -21,10 +20,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body>
-        <Header />
-        {children}
-        <Footer />
+      <body style={{ position: "relative" }}>
+        <ClientRoot>{children}</ClientRoot>
       </body>
     </html>
   );

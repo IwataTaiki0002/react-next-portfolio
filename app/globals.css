@@ -36,6 +36,16 @@ body {
     sans-serif;
   color: var(--color-text-main);
   line-height: 1.8;
+  background: linear-gradient(
+    135deg,
+    #1e3c72 0%,
+    #2a5298 25%,
+    #3d6cb9 50%,
+    #5089c6 75%,
+    #6ba3d4 100%
+  );
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
 code {
