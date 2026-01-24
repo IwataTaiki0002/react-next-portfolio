@@ -32,3 +32,15 @@
   font-weight: bold;
   margin-bottom: 8px;
 }
+
+[data-theme="dark"] .name {
+  color: #fff;
+}
+
+[data-theme="dark"] .card :global(.Date_date__ElJv4) {
+  color: #fff;
+}
+
+[data-theme="dark"] .card :global(.Date_date__ElJv4) img {
+  filter: brightness(0) invert(1);
+}

@@ -1,9 +1,10 @@
 import Link from "next/link";
 import styles from "./index.module.css";
+import KamomeArea from "@/app/_components/KamomeArea";
 
 export default function Footer() {
   return (
-    <footer className={styles.footer}>
+    <KamomeArea as="footer" className={styles.footer}>
       <nav className={styles.nav}>
         <ul className={styles.items}>
           <li className={styles.item}>
@@ -21,6 +22,6 @@ export default function Footer() {
         </ul>
       </nav>
       <p className={styles.cr}>© Portfolio Site. All Rights Reserved 2026</p>
-    </footer>
+    </KamomeArea>
   );
 }

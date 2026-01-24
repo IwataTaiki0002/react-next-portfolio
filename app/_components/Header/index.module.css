@@ -17,8 +17,18 @@
   width: auto;
 }
 
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 @media (max-width: 640px) {
   .header {
     padding: 24px 16px 8px;
+  }
+  
+  .headerRight {
+    gap: 12px;
   }
 }

@@ -6,6 +6,7 @@ import { TOP_BLOG_LIMIT, TOP_WORKS_LIMIT } from "@/app/_constants";
 import NewsList from "@/app/_components/NewsList";
 import WorksList from "@/app/_components/WorksList";
 import ButtonLink from "@/app/_components/ButtonLink";
+import KamomeArea from "@/app/_components/KamomeArea";
 
 export const revalidate = 60;
 
@@ -27,7 +28,7 @@ export default async function Home() {
 
   return (
     <>
-      <section className={styles.top}>
+      <KamomeArea className={styles.top}>
         <div className={styles.taiyakiWrapper}>
           <Image
             src="/taiyaki.png"
@@ -44,7 +45,7 @@ export default async function Home() {
             制作物や学びの記録を発信しています。
           </p>
         </div>
-      </section>
+      </KamomeArea>
 
       <div className={styles.sections}>
         <section className={styles.section}>
