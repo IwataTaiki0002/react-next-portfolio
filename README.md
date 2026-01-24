@@ -1,107 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Read me
 
-## Getting Started
+# react-next-portfolio
 
-First, run the development server:
+サイトURL: https://react-next-portfolio-zvjz.vercel.app/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+エンジニア志望者向けのポートフォリオサイトです。Next.js・React・TypeScript・microCMSを活用し、自己紹介・作品・技術ブログ・お問い合わせ機能を実装しています。企業の採用担当者や関係者に自分の活動・スキル・制作物を分かりやすく伝えることを目的としています。
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# 課題の紹介
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## TOP
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- サイト全体の目的を伝えるヒーローセクション
+- About/Works/Blog/Contactへの導線をカード型で配置
 
-## Learn More
+## 自己紹介のページ
 
-To learn more about Next.js, take a look at the following resources:
+- プロフィール画像・名前・役職・自己紹介文をカード型で中央表示
+- 学習中のスキルをアイコン＋ラベルでグリッド表示
+https://github.com/logout
+## ブログ一覧ページ
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- microCMSから記事を取得しカードグリッドで表示
+- カテゴリ・検索・ページネーション機能
+- 記事タイトル・カテゴリ・日付・本文プレビュー表示
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## ブログ詳細ページ
 
-## Deploy on Vercel
+- タイトル・概要・カテゴリ・日付・サムネイル画像・本文（リッチテキスト）表示
+- 一覧へ戻るボタン
+- OGP対応（今後拡張予定）
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# 一番見てほしいところ
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- ダークモード
+- ブログ機能（検索・カテゴリ・ページネーション）
+- 背景クリック時のギミック
 
-# テーマ
+# 力を入れた点
 
-#- エンジニアのインターンシップ・アルバイト、または就職活動などに申し込む際に自分をアピールできるようにするためのWebサイト作品を制作します
-#- Next.js, React, TypeScriptを使用します
+## 実装面
 
-# - それ以外は自由です
+- microCMS API連携による動的データ取得
+- Next.jsのISR（60秒ごと再取得）によるパフォーマンス最適化
+- サーバーアクションによるお問い合わせフォーム実装
 
-#- コンテンツ管理用のCMSとしてmicroCMSを使用します
-#- TOPページ
+## デザイン面
 
-# - エントリーページ
-
-#- 経歴・自己紹介・プロフィールページ
-
-# - 自己紹介、学習している内容、専攻している内容、制作した課題などをまとめて記載する
-
-#イメージはこんな感じ ↓ #https://react-next-portfolio-iota.vercel.app/about #https://iris-fla.me/profile #https://react-next-portfolio-gamma.vercel.app/about
-
-#- 記事・ブログの一覧ページ
-
-# - 自分の作った作品や技術記事、普段考えている事、試してみたことなど、文章を書き溜めておくためのスペース
-
-# - microCMSを使用してください
-
-# イメージはこんな感じ ↓
-
-# https://react-next-portfolio-iota.vercel.app/works
-
-# https://iris-fla.me/
-
-# https://react-next-portfolio-chi.vercel.app/article/article
-
-# # ページ実装に関する要件
-
-#- Next.js, Reactを必ず使用すること
-#- ヘッダーフッターを実装し、サイトのナビゲーションメニューも作成すること
-#- microCMSを利用したブログページを作成すること
-#- 例えば…
-
-# - ニュースページを自分の発信のためのブログに改修
-
-# - メンバーページは自分の作品などを列挙するスペースとする
-
-# など…
-
-# # コンテンツに関する要件
-
-#- 企業の採用担当者に見せる前提とします
-
-# - **公序良俗に反する内容は絶対に禁止**
-
-#- うまく自分をアピールできるような内容にしてください
-#- 学内や学外で熱心に取り組んでいることがあればそれをネタにしてもいいかもしれません
-#- その他アピールできそうなものがあればそれを掲載
-
-#参考サイト #https://iris-fla.me/ #https://wangchang.dog/job-history
-
-これらのファイルはNext.jsを使用しています
-microCMSを使用しています
-Vercelも使っています
-お問い合わせ用にHubSpotも使用しています
-ページ要件は下記のようになっています
-現在、トップページ、プロフィールページ、ブログページ、お問い合わせページとなっています
-フィールドID　表示名
-name　名前
-position　役職
-profile　プロフィール
-image　画像
-これを
-フィールドID　表示名
+- 青グラデーション背景・カード型セクション
+- レスポンシブ対応・モバイル最適化
+- 画像最適化（Next.js Imageコンポーネント活用）
