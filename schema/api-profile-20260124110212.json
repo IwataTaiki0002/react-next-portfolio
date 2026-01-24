@@ -1,0 +1,1 @@
+{"apiFields":[{"fieldId":"name","name":"名前","kind":"text","required":true,"isUnique":false},{"fieldId":"position","name":"役職","kind":"text","required":true},{"fieldId":"profile","name":"プロフィール","kind":"textArea","required":true},{"fieldId":"image","name":"画像","kind":"media","required":true}],"customFields":[]}

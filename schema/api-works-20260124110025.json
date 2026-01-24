@@ -1,0 +1,1 @@
+{"apiFields":[{"fieldId":"date","name":"日付","kind":"date","required":true},{"fieldId":"name","name":"名前","kind":"text","required":true},{"fieldId":"link_url","name":"リンクURL","kind":"text","required":false},{"fieldId":"thumbnail","name":"サムネイル画像","kind":"media","required":false},{"fieldId":"content","name":"作品紹介文","kind":"richEditorV2","required":true}],"customFields":[]}
