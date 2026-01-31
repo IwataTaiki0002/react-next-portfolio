@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { getProfileList } from "@/app/_libs/microcms";
+import { stripHtmlTags } from "@/app/_libs/utils";
 import { PROFILE_LIST_LIMIT } from "@/app/_constants";
 import styles from "./page.module.css";
 
@@ -15,7 +16,8 @@ export default async function Page() {
   
   // 1人目のみ表示
   const member = data.contents[0];
-  const profilePreview = member.profile.substring(0, 150);
+  const cleanProfile = stripHtmlTags(member.profile);
+  const profilePreview = cleanProfile.substring(0, 150);
   
   return (
     <section className={styles.profileSection}>
@@ -37,7 +39,7 @@ export default async function Page() {
           {member.position && (
             <p className={styles.profilePosition}>{member.position}</p>
           )}
-          <p className={styles.profilePreview}>{profilePreview}...</p>
+          <p className={styles.profilePreview}>{profilePreview}</p>
         </div>
       </div>
       

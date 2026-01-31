@@ -6,10 +6,6 @@
   font-size: 1rem;
 }
 
-[data-theme="dark"] .date {
-  color: #000;
-}
-
-[data-theme="dark"] .date img {
-  filter: brightness(0) invert(1);
+.clockIcon {
+  display: inline-block;
 }
